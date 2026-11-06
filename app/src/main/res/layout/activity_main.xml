@@ -1,19 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/tv_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="First Name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/et_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv_first_name"
+        android:hint="Enter First Name"
+        android:inputType="textPersonName"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_first_name"
+        android:layout_marginTop="16dp"
+        android:text="Last Name" />
+
+    <EditText
+        android:id="@+id/et_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_last_name"
+        android:hint="Enter Last Name"
+        android:inputType="textPersonName"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_yob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_last_name"
+        android:layout_marginTop="16dp"
+        android:text="Year of Birth (YOB)" />
+
+    <EditText
+        android:id="@+id/et_yob"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_yob"
+        android:hint="Enter YOB (XXXX)"
+        android:inputType="number"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_hometown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_yob"
+        android:layout_marginTop="16dp"
+        android:text="Hometown" />
+
+    <EditText
+        android:id="@+id/et_hometown"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_hometown"
+        android:hint="Enter Hometown"
+        android:inputType="textPersonName"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_hometown"
+        android:layout_marginTop="16dp"
+        android:text="Gender"/>
+
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_gender"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_good_manners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_gender"
+        android:layout_marginTop="16dp"
+        android:text="Good Manners" />
+
+    <CheckBox
+        android:id="@+id/cb_respect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_good_manners"
+        android:text="Respect everyone" />
+
+    <CheckBox
+        android:id="@+id/cb_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb_respect"
+        android:text="Help others" />
+
+    <CheckBox
+        android:id="@+id/cb_honest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb_help"
+        android:text="Be honest" />
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cb_honest"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
+            app:cornerRadius="6dp"
+            android:text="Reset"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            app:cornerRadius="6dp"
+            android:text="Submit"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
