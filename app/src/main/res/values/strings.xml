@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Assigment_1</string>
+    <string name="tv_first_name">First Name</string>
+    <string name="et_first_name">Enter First Name</string>
+    <string name="tv_last_name">Last Name</string>
+    <string name="et_last_name">Enter Last Name</string>
+    <string name="tv_yob">Year of Birth (YOB)</string>
+    <string name="et_yob">Enter YOB (XXXX)</string>
+    <string name="tv_hometown">Hometown</string>
+    <string name="et_hometown">Enter Hometown</string>
+    <string name="tv_gender">Gender</string>
+    <string name="rb_male">Male</string>
+    <string name="rb_female">Female</string>
+    <string name="tv_good_manners">Good Manners</string>
+    <string name="cb_respect">Respect everyone</string>
+    <string name="cb_help">Help others</string>
+    <string name="cb_honest">Be honest</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_submit">Submit</string>
+    <string name="iv_logo">Logo</string>
+    <string name="tv_fa_title_1">Know</string>
+    <string name="tv_fa_title_2">Me</string>
+    <string name="tv_sa_title">My Story</string>
+    <string name="tv_output">output</string>
+    <string name="btn_back">Back</string>
 </resources>
