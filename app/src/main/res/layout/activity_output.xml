@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true"
     android:layout_margin="16dp"
-    tools:context=".SecondActivity">
+    tools:context=".OutputActivity">
 
     <TextView
         android:id="@+id/tv_sa_title"
