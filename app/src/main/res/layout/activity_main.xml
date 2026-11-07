@@ -103,6 +103,7 @@
         android:textSize="16sp"
         android:hint="@string/et_yob"
         android:inputType="number"
+        android:maxLength="4"
         android:maxLines="1"/>
 
     <TextView
@@ -151,6 +152,7 @@
             android:id="@+id/rb_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             app:buttonTint="@color/turquoise"
             android:textSize="16sp"
             android:text="@string/rb_female" />

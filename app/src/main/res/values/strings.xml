@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Assigment_1</string>
     <string name="tv_first_name">First Name</string>
-    <string name="et_first_name">Enter First Name</string>
+    <string name="et_first_name">e.g.: Ahmad</string>
     <string name="tv_last_name">Last Name</string>
-    <string name="et_last_name">Enter Last Name</string>
+    <string name="et_last_name">e.g.: Nasruddin</string>
     <string name="tv_yob">Year of Birth (YOB)</string>
-    <string name="et_yob">Enter YOB (XXXX)</string>
+    <string name="et_yob">e.g.: 1999</string>
     <string name="tv_hometown">Hometown</string>
-    <string name="et_hometown">Enter Hometown</string>
+    <string name="et_hometown">e.g.: Shah Alam, Selangor</string>
     <string name="tv_gender">Gender</string>
     <string name="rb_male">Male</string>
     <string name="rb_female">Female</string>
