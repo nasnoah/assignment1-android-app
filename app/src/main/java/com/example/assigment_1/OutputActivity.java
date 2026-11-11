@@ -18,7 +18,7 @@ public class OutputActivity extends AppCompatActivity {
     Button btnBack;
 
     // Declare and initialized needed variables and constants
-    String firstName, lastName, hometown, gender, msg;
+    String firstName, lastName, hometown, gender, output;
     int yob, age;
     ArrayList<String> goodManners;
 
@@ -44,21 +44,8 @@ public class OutputActivity extends AppCompatActivity {
         gender = bundle.getString("GENDER");
         goodManners = bundle.getStringArrayList("GOOD MANNERS");
 
-        msg = "Name: " + firstName + " " + lastName
-            + "\nYOB: " + yob
-            + "\nAge: " + age
-            + "\nHometown: " + hometown
-            + "\nGender: " + gender
-            + "\nGood Manners: ";
-
-        assert goodManners != null;
-        int index = 1;
-        for(String goodManner : goodManners) {
-            msg += "\n" + index + ". " + goodManner;
-            index++;
-        }
-
-        tvOutput.setText(msg);
+        output = getOutput();
+        tvOutput.setText(output);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,5 +55,56 @@ public class OutputActivity extends AppCompatActivity {
                 //finish();
             }
         });
+    }
+
+    private String getOutput() {
+
+        String addressing, pronouns, possesive;
+        if (age <= 12)// Child
+            addressing = "little";
+        else if (age <= 18) // Teenager
+            addressing = "teenage";
+        else if (age < 60) // Adult
+            addressing = "";
+        else // Senior Citizen
+            addressing = "elderly";
+
+        if (gender.equalsIgnoreCase("male")) {
+            if (age <= 18)
+                addressing += " boy";
+            else
+                addressing += " man";
+
+            pronouns = "he";
+            possesive = "his";
+        }
+        else {
+            if (age <= 18)
+                addressing += " girl";
+            else
+                addressing += " woman";
+
+            pronouns = "she";
+            possesive = "her";
+        }
+
+        assert goodManners != null;
+        String manners = goodManners.size() + " rules: ";
+        int index = 0;
+        for(String goodManner : goodManners) {
+            manners += goodManner.toLowerCase();
+            if (index == goodManners.size() - 2) {
+                manners += " and ";
+            }
+            else if (index != goodManners.size() - 1) {
+                manners += ", ";
+            }
+            index++;
+        }
+
+        return "Villains attacked Earth, but " + firstName + " " + lastName + ", a " + addressing.trim() + " born in " + yob + ", was not afraid. " +
+                "\n\nAt " + age + ", the hero from " + hometown + ", followed " + manners + ". " +
+                "\n\nTrusting Allah, " + pronouns + " stayed brave, and even enemies dropped their weapons. " +
+                "\n\nKindness was " + possesive + " true superpower.";
     }
 }
