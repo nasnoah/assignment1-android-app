@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             cbRespect.setError(null);
             cbHelp.setError(null);
             cbHonest.setError(null);
+
+            Toast.makeText(MainActivity.this, "Successfully Reset", Toast.LENGTH_SHORT).show();
         }
         else if (viewId  == btnSubmit.getId()) {
 
